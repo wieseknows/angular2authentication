@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 *ngIf="!auth.authenticated()">Hello!</h1>
+    <h1 *ngIf="auth.authenticated()">Under construction!</h1>
+    <blockquote>
+      <p>We are glad to see you there! <br>Please log in to take part in our project.</p>
+      <small>For the first time to <i>wieseknows</i> ? Sign Up!</small>
+    </blockquote>
+    <span><p></p></span><br>
+    <div class="alert alert-danger" *ngIf="!auth.authenticated()">You are not logged in</div>
+    <div class="alert alert-success" *ngIf="auth.authenticated()">You are logged in</div>
+  </div>
+</div>
+
+

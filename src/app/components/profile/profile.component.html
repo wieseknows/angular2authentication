@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-2">
+    <img class="img-circle" style="width:100%" src="{{profile.picture}}">
+  </div>
+  <div class="col-md-10">
+    <h1>{{profile.nickname}}'s profile</h1>
+    <p>Email: {{profile.name}}</p>
+    <div class="col-md-5 alert alert-dismissable alert-warning" *ngIf="!profile.email_verified">
+      <h4>Warning</h4>
+      <p>Your email is not verified!</p>
+    </div>
+    <div class="col-md-5 alert alert-success alert-dismissable" *ngIf="profile.email_verified">
+      <h4>Well done</h4>
+      <p>Your email is verified!</p>
+    </div>
+  </div>
+</div>
